@@ -9,7 +9,7 @@ int main(void) {
     pid_t pid = fork();
 
     if(pid == 0) {
-      printf("Child process => PPID=%d, PID=%d\n", getpid(), getpid());
+      printf("Child process => PPID=%d, PID=%d\n", getppid(), getpid());
       exit(0);
     }
     else {
